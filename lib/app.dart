@@ -12,7 +12,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: Scaffold(
-        appBar: AppBar(title: Center(child: Text("Mobile Pay"),),)
+        appBar: MobilePayAppBar(),
+        body: Center(
+          child: Text("Hello bangldesh"),
+        ),
       ),
     );
 
