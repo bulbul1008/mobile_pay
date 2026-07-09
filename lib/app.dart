@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_pay/core/widgets/mobile_pay_app_bar.dart';
+import 'package:mobile_pay/core/widgets/transactions_card.dart';
+import 'package:mobile_pay/core/widgets/wallet_balance_card.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,11 +15,12 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: MobilePayAppBar(),
-        body: Center(
-          child: Text("Hello bangldesh"),
+        body: SingleChildScrollView(
+          padding: EdgeInsets.all(20),
+            child:WalletBalanceCard(balance: 100000),
+          )
         ),
-      ),
-    );
+      );
 
   }
 }
