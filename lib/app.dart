@@ -17,11 +17,14 @@ class MyApp extends StatelessWidget {
         appBar: MobilePayAppBar(),
         body: SingleChildScrollView(
           padding: EdgeInsets.all(20),
-            child:WalletBalanceCard(balance: 100000),
-          )
+          child: Column(
+            children: [
+              WalletBalanceCard(balance: 100000),
+              SizedBox(height: 30),
+            ],
+          ),
         ),
-      );
-
+      ),
+    );
   }
 }
-
